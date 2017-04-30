@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>BeatsByJohn</title>
+    <script type="text/javascript" src="paper-full.min.js"></script>
+    <link rel="stylesheet" href="beats.css">
+
+    <script type="text/paperscript" canvas="myCanvas">
+
+      var shapes = [];
+      function onKeyDown(event) {
+        var maxPoint = new Point(view.size._width, view.size._height)
+        var randomPoint = Point.random();
+        var point = maxPoint * randomPoint;
+
+        //rectangle
+        var rectangle = new Path.Rectangle({
+          point: point,
+          size: [75, 75],
+          fillColor: 'red'
+        });
+
+        shapes.push(rectangle)
+
+        //circle
+        // var circle = new Path.Circle(point, 50);
+        // circle.fillColor = 'black';
+
+        //decagon
+        // var decagon = new Path.RegularPolygon(point, 10, 20);
+        // decagon.fillColor = '#e9e9ff';
+      }
+
+
+      function onFrame(event) {
+        for(var index = 0; index < shapes.length; index ++){
+          shapes[index].rotate(3);
+          shapes[index].fillColor.hue += 1;
+          shapes[index].scale(.99)
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+    <canvas id="myCanvas" resize></canvas>
+  </body>
+</html>
