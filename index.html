@@ -25,7 +25,7 @@
       c:{
           color: "green",
           sound: new Howl({src: ['sounds/confetti.mp3']}),
-          shape: "decagon"
+          shape: "polygon"
         },
 
       d:{
@@ -55,13 +55,13 @@
       h:{
           color: "#8cf441",
           sound: new Howl({src: ['sounds/flash-3.mp3']}),
-          shape: "circle"
+          shape: "magic"
         },
 
       i:{
           color: "#a941f4",
           sound: new Howl({src: ['sounds/glimmer.mp3']}),
-          shape: "decagon"
+          shape: "polygon"
         },
 
       j:{
@@ -103,7 +103,7 @@
       p:{
           color: "#bcf6ff",
           sound: new Howl({src: ['sounds/prism-2.mp3']}),
-          shape: "triangle"
+          shape: "polygon"
         },
 
       q:{
@@ -213,6 +213,11 @@
           var magic = new paper.Path.Star(point, 100, sizeX, sizeY);
           magic.fillColor = keys[event.key].color;
           shapes.push(magic);
+        } else if (keys[event.key].shape === "polygon"){
+          sizeX = Math.floor(Math.random() * (100 - 50)) + 50;
+          var polygon = new paper.Path.RegularPolygon(point, 5, sizeX);
+          polygon.fillColor = keys[event.key].color;
+          shapes.push(polygon)
         }
 
       }
