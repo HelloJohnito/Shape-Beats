@@ -7,163 +7,162 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.0.3/howler.core.min.js"></script>
     <link rel="stylesheet" href="beats.css">
 
-
     <script type="text/paperscript" canvas="myCanvas">
 
     var keys = {
       a:{
           color: "red",
-          sound: new Howl({src: ['sounds/bubbles.mp3']}),
+          sound: new Howl({src: ['Sounds/bubbles.mp3']}),
           shape: "rectangle"
         },
 
       b:{
           color: "orange",
-          sound: new Howl({src: ['sounds/clay.mp3']}),
+          sound: new Howl({src: ['Sounds/clay.mp3']}),
           shape: "circle"
         },
 
       c:{
           color: "green",
-          sound: new Howl({src: ['sounds/confetti.mp3']}),
+          sound: new Howl({src: ['Sounds/confetti.mp3']}),
           shape: "polygon"
         },
 
       d:{
           color: "grey",
-          sound: new Howl({src: ['sounds/corona.mp3']}),
+          sound: new Howl({src: ['Sounds/corona.mp3']}),
           shape: "triangle"
         },
 
       e:{
           color: "yellow",
-          sound: new Howl({src: ['sounds/dotted-spiral.mp3']}),
+          sound: new Howl({src: ['Sounds/dotted-spiral.mp3']}),
           shape: "star"
         },
 
       f:{
         color: "lightblue",
-        sound: new Howl({src: ['sounds/flash-1.mp3']}),
+        sound: new Howl({src: ['Sounds/flash-1.mp3']}),
         shape: "magic"
       },
 
       g:{
           color: "#42f4bf",
-          sound: new Howl({src: ['sounds/flash-2.mp3']}),
+          sound: new Howl({src: ['Sounds/flash-2.mp3']}),
           shape: "rectangle"
         },
 
       h:{
           color: "#8cf441",
-          sound: new Howl({src: ['sounds/flash-3.mp3']}),
+          sound: new Howl({src: ['Sounds/flash-3.mp3']}),
           shape: "magic"
         },
 
       i:{
           color: "#a941f4",
-          sound: new Howl({src: ['sounds/glimmer.mp3']}),
+          sound: new Howl({src: ['Sounds/glimmer.mp3']}),
           shape: "polygon"
         },
 
       j:{
           color: "#f4b2ea",
-          sound: new Howl({src: ['sounds/moon.mp3']}),
+          sound: new Howl({src: ['Sounds/moon.mp3']}),
           shape: "triangle"
         },
 
       k:{
           color: "#b2b7f4",
-          sound: new Howl({src: ['sounds/pinwheel.mp3']}),
+          sound: new Howl({src: ['Sounds/pinwheel.mp3']}),
           shape: "star"
         },
 
       l:{
         color: "#ccf4b2",
-        sound: new Howl({src: ['sounds/piston-1.mp3']}),
+        sound: new Howl({src: ['Sounds/piston-1.mp3']}),
         shape: "magic"
       },
 
       m:{
           color: "#bc9871",
-          sound: new Howl({src: ['sounds/piston-2.mp3']}),
+          sound: new Howl({src: ['Sounds/piston-2.mp3']}),
           shape: "rectangle"
         },
 
       n:{
           color: "#797a3a",
-          sound: new Howl({src: ['sounds/piston-3.mp3']}),
+          sound: new Howl({src: ['Sounds/piston-3.mp3']}),
           shape: "triangle"
         },
 
       o:{
           color: "#8be5be",
-          sound: new Howl({src: ['sounds/prism-1.mp3']}),
+          sound: new Howl({src: ['Sounds/prism-1.mp3']}),
           shape: "decagon"
         },
 
       p:{
           color: "#bcf6ff",
-          sound: new Howl({src: ['sounds/prism-2.mp3']}),
+          sound: new Howl({src: ['Sounds/prism-2.mp3']}),
           shape: "polygon"
         },
 
       q:{
           color: "#bcd7ff",
-          sound: new Howl({src: ['sounds/prism-3.mp3']}),
+          sound: new Howl({src: ['Sounds/prism-3.mp3']}),
           shape: "star"
         },
 
       r:{
         color: "#edbcff",
-        sound: new Howl({src: ['sounds/splits.mp3']}),
+        sound: new Howl({src: ['Sounds/splits.mp3']}),
         shape: "magic"
       },
 
       s:{
           color: "#ffbcdf",
-          sound: new Howl({src: ['sounds/squiggle.mp3']}),
+          sound: new Howl({src: ['Sounds/squiggle.mp3']}),
           shape: "rectangle"
         },
 
       t:{
           color: "#ea7575",
-          sound: new Howl({src: ['sounds/strike.mp3']}),
+          sound: new Howl({src: ['Sounds/strike.mp3']}),
           shape: "circle"
         },
 
       u:{
           color: "#7f8719",
-          sound: new Howl({src: ['sounds/suspension.mp3']}),
+          sound: new Howl({src: ['Sounds/suspension.mp3']}),
           shape: "decagon"
         },
 
       v:{
           color: "#82ef28",
-          sound: new Howl({src: ['sounds/timer.mp3']}),
+          sound: new Howl({src: ['Sounds/timer.mp3']}),
           shape: "triangle"
         },
 
       w:{
           color: "#27ef8e",
-          sound: new Howl({src: ['sounds/ufo.mp3']}),
+          sound: new Howl({src: ['Sounds/ufo.mp3']}),
           shape: "star"
         },
 
       x:{
         color: "#d81e78",
-        sound: new Howl({src: ['sounds/veil.mp3']}),
+        sound: new Howl({src: ['Sounds/veil.mp3']}),
         shape: "magic"
       },
 
       y:{
           color: "#199bb5",
-          sound: new Howl({src: ['sounds/wipe.mp3']}),
+          sound: new Howl({src: ['Sounds/wipe.mp3']}),
           shape: "circle"
         },
 
       z:{
           color: "#f9d9d9",
-          sound: new Howl({src: ['sounds/zig-zag.mp3']}),
+          sound: new Howl({src: ['Sounds/zig-zag.mp3']}),
           shape: "decagon"
         },
     }
@@ -171,56 +170,58 @@
 
       var shapes = [];
       function onKeyDown(event){
-        keys[event.key].sound.play()
 
-        var maxPoint = new Point(view.size._width, view.size._height)
-        var randomPoint = Point.random();
-        var point = maxPoint * randomPoint;
+        if(keys.hasOwnProperty(event.key)){
+          keys[event.key].sound.play()
+
+          var maxPoint = new Point(view.size._width, view.size._height)
+          var randomPoint = Point.random();
+          var point = maxPoint * randomPoint;
 
 
-        var sizeX, sizeY
-        if(keys[event.key].shape === "rectangle"){
-          sizeX = Math.floor(Math.random() * (200 - 80)) + 80;
-          var rectangle = new Path.Rectangle({
-            point: point,
-            size: [sizeX, sizeX],
-            fillColor: keys[event.key].color
-          });
-          shapes.push(rectangle)
-        }else if(keys[event.key].shape === "circle"){
-          sizeX = Math.floor(Math.random() * (150 - 80)) + 80;
-          var circle = new Path.Circle(point, sizeX);
-          circle.fillColor = keys[event.key].color;
-          shapes.push(circle)
-        }else if(keys[event.key].shape === "decagon"){
-          sizeX = Math.floor(Math.random() * (150 - 80)) + 80;
-          var decagon = new Path.RegularPolygon(point, 10, sizeX);
-          decagon.fillColor = keys[event.key].color;
-          shapes.push(decagon)
-        }else if(keys[event.key].shape === "triangle"){
-          sizeX = Math.floor(Math.random() * (200 - 80)) + 80;
-          var triangle = new Path.RegularPolygon(point, 3, sizeX);
-          triangle.fillColor = keys[event.key].color;
-          shapes.push(triangle);
-        }else if(keys[event.key].shape === "star"){
-          sizeX = Math.floor(Math.random() * (250 - 100)) + 100;
-          sizeY = Math.floor(Math.random() * (50 - 5)) + 5;
-          var star = new paper.Path.Star(point, 10, sizeX, sizeY);
-          star.fillColor = keys[event.key].color;
-          shapes.push(star);
-        }else if(keys[event.key].shape === "magic"){
-          sizeX = Math.floor(Math.random() * (250 - 100)) + 100;
-          sizeY = Math.floor(Math.random() * (30 - 5)) + 5;
-          var magic = new paper.Path.Star(point, 100, sizeX, sizeY);
-          magic.fillColor = keys[event.key].color;
-          shapes.push(magic);
-        } else if (keys[event.key].shape === "polygon"){
-          sizeX = Math.floor(Math.random() * (100 - 50)) + 50;
-          var polygon = new paper.Path.RegularPolygon(point, 5, sizeX);
-          polygon.fillColor = keys[event.key].color;
-          shapes.push(polygon)
+          var sizeX, sizeY
+          if(keys[event.key].shape === "rectangle"){
+            sizeX = Math.floor(Math.random() * (200 - 80)) + 80;
+            var rectangle = new Path.Rectangle({
+              point: point,
+              size: [sizeX, sizeX],
+              fillColor: keys[event.key].color
+            });
+            shapes.push(rectangle)
+          }else if(keys[event.key].shape === "circle"){
+            sizeX = Math.floor(Math.random() * (150 - 80)) + 80;
+            var circle = new Path.Circle(point, sizeX);
+            circle.fillColor = keys[event.key].color;
+            shapes.push(circle)
+          }else if(keys[event.key].shape === "decagon"){
+            sizeX = Math.floor(Math.random() * (150 - 80)) + 80;
+            var decagon = new Path.RegularPolygon(point, 10, sizeX);
+            decagon.fillColor = keys[event.key].color;
+            shapes.push(decagon)
+          }else if(keys[event.key].shape === "triangle"){
+            sizeX = Math.floor(Math.random() * (200 - 80)) + 80;
+            var triangle = new Path.RegularPolygon(point, 3, sizeX);
+            triangle.fillColor = keys[event.key].color;
+            shapes.push(triangle);
+          }else if(keys[event.key].shape === "star"){
+            sizeX = Math.floor(Math.random() * (250 - 100)) + 100;
+            sizeY = Math.floor(Math.random() * (50 - 5)) + 5;
+            var star = new paper.Path.Star(point, 10, sizeX, sizeY);
+            star.fillColor = keys[event.key].color;
+            shapes.push(star);
+          }else if(keys[event.key].shape === "magic"){
+            sizeX = Math.floor(Math.random() * (250 - 100)) + 100;
+            sizeY = Math.floor(Math.random() * (30 - 5)) + 5;
+            var magic = new paper.Path.Star(point, 100, sizeX, sizeY);
+            magic.fillColor = keys[event.key].color;
+            shapes.push(magic);
+          } else if (keys[event.key].shape === "polygon"){
+            sizeX = Math.floor(Math.random() * (100 - 50)) + 50;
+            var polygon = new paper.Path.RegularPolygon(point, 5, sizeX);
+            polygon.fillColor = keys[event.key].color;
+            shapes.push(polygon)
+          }
         }
-
       }
 
 
