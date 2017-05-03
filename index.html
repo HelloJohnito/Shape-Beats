@@ -168,6 +168,17 @@
         },
     }
 
+    var text = new PointText(view.center);
+     text.content = "Make Beats your with 'a'-'z'";
+     text.style = {
+       fillColor: 'lightblue',
+       fontWeight: 'bold',
+       fontSize: 60,
+       fontFamily: 'Lato',
+       justification: 'center'
+     };
+
+
 
       var shapes = [];
       function onKeyDown(event){
@@ -227,9 +238,10 @@
 
 
       function onFrame(event) {
+        text.fillColor.hue += 1
         for(var index = 0; index < shapes.length; index ++){
           shapes[index].rotate(3);
-          shapes[index].fillColor.hue += 1;
+          shapes[index].fillColor.hue += 4;
           shapes[index].scale(.99)
 
           if(shapes[index].area < 1){
@@ -242,6 +254,11 @@
 
   </head>
   <body>
-    <canvas id="myCanvas" resize></canvas>
+    <div class="border">
+      <canvas id="myCanvas" resize></canvas>
+      <div class="start-menu">
+        <div class="text">Controls are 'A' - 'Z' Press ENTER to start</div>
+      </div>
+    </div>
   </body>
 </html>
