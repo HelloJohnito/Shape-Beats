@@ -1,6 +1,6 @@
 ## Shape Beats
 
-[Live Link](https://hellojohnito.github.io/shapeBeats/)
+[Live Link](https://hellojohnito.github.io/Shape-Beats/)
 
 <p align="center">
     <img src="image/shapebeats.png" alt="Landing Page" />
